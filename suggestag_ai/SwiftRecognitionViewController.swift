@@ -51,6 +51,8 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
     private func recognizeImage(image: UIImage!) {
         // Scale down the image. This step is optional. However, sending large images over the
         // network is slow and does not significantly improve recognition performance.
+        
+        
         let size = CGSizeMake(320, 320 * image.size.height / image.size.width)
         UIGraphicsBeginImageContext(size)
         image.drawInRect(CGRectMake(0, 0, size.width, size.height))

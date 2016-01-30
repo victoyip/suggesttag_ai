@@ -119,8 +119,8 @@
 		4C03DCD81C5D1AB500F06A44 /* suggestag_ai */ = {
 			isa = PBXGroup;
 			children = (
-				4C03DD091C5D1B4400F06A44 /* Storyboard */,
 				4C03DD081C5D1B3C00F06A44 /* Fonts */,
+				4C03DD091C5D1B4400F06A44 /* Storyboard */,
 				4C03DD071C5D1B2D00F06A44 /* Swift */,
 				4C03DCE01C5D1AB500F06A44 /* Assets.xcassets */,
 				4C03DCE51C5D1AB500F06A44 /* Info.plist */,
