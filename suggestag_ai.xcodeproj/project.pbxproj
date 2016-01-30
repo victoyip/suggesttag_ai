@@ -14,6 +14,9 @@
 		4C03DCE41C5D1AB500F06A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C03DCE21C5D1AB500F06A44 /* LaunchScreen.storyboard */; };
 		4C03DCEF1C5D1AB500F06A44 /* suggestag_aiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DCEE1C5D1AB500F06A44 /* suggestag_aiTests.swift */; };
 		4C03DCFA1C5D1AB500F06A44 /* suggestag_aiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DCF91C5D1AB500F06A44 /* suggestag_aiUITests.swift */; };
+		4C03DD171C5D2DDE00F06A44 /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DD161C5D2DDE00F06A44 /* ClarifaiClient.m */; };
+		4C03DD191C5D2EE700F06A44 /* SwiftRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DD181C5D2EE700F06A44 /* SwiftRecognitionViewController.swift */; };
+		BE6C6EA57D3B092EC686E84B /* Pods_suggestag_ai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F63C6AA2FD5409DF201CE5 /* Pods_suggestag_ai.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		096A3754EF607A8931A654D0 /* Pods-suggestag_ai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-suggestag_ai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-suggestag_ai/Pods-suggestag_ai.debug.xcconfig"; sourceTree = "<group>"; };
+		4240B58FEAA251760351A01B /* Pods-suggestag_ai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-suggestag_ai.release.xcconfig"; path = "Pods/Target Support Files/Pods-suggestag_ai/Pods-suggestag_ai.release.xcconfig"; sourceTree = "<group>"; };
 		4C03DCD61C5D1AB500F06A44 /* suggestag_ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = suggestag_ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C03DCD91C5D1AB500F06A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C03DCDB1C5D1AB500F06A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		4C03DCF51C5D1AB500F06A44 /* suggestag_aiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = suggestag_aiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C03DCF91C5D1AB500F06A44 /* suggestag_aiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suggestag_aiUITests.swift; sourceTree = "<group>"; };
 		4C03DCFB1C5D1AB500F06A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C03DD141C5D2DDD00F06A44 /* suggestag_ai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "suggestag_ai-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C03DD151C5D2DDE00F06A44 /* ClarifaiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
+		4C03DD161C5D2DDE00F06A44 /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
+		4C03DD181C5D2EE700F06A44 /* SwiftRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRecognitionViewController.swift; sourceTree = "<group>"; };
+		C9F63C6AA2FD5409DF201CE5 /* Pods_suggestag_ai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_suggestag_ai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6C6EA57D3B092EC686E84B /* Pods_suggestag_ai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC08028875015CD08AFF6CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096A3754EF607A8931A654D0 /* Pods-suggestag_ai.debug.xcconfig */,
+				4240B58FEAA251760351A01B /* Pods-suggestag_ai.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4C03DCCD1C5D1AB500F06A44 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 				4C03DCED1C5D1AB500F06A44 /* suggestag_aiTests */,
 				4C03DCF81C5D1AB500F06A44 /* suggestag_aiUITests */,
 				4C03DCD71C5D1AB500F06A44 /* Products */,
+				3FC08028875015CD08AFF6CC /* Pods */,
+				BD4C49B41F37C352114FD681 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,8 +149,12 @@
 		4C03DD071C5D1B2D00F06A44 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				4C03DD181C5D2EE700F06A44 /* SwiftRecognitionViewController.swift */,
+				4C03DD151C5D2DDE00F06A44 /* ClarifaiClient.h */,
+				4C03DD161C5D2DDE00F06A44 /* ClarifaiClient.m */,
 				4C03DCDB1C5D1AB500F06A44 /* ViewController.swift */,
 				4C03DCD91C5D1AB500F06A44 /* AppDelegate.swift */,
+				4C03DD141C5D2DDD00F06A44 /* suggestag_ai-Bridging-Header.h */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -149,6 +175,14 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		BD4C49B41F37C352114FD681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9F63C6AA2FD5409DF201CE5 /* Pods_suggestag_ai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C03DCFE1C5D1AB500F06A44 /* Build configuration list for PBXNativeTarget "suggestag_ai" */;
 			buildPhases = (
+				E5B1A776CB018562009D7722 /* Check Pods Manifest.lock */,
 				4C03DCD21C5D1AB500F06A44 /* Sources */,
 				4C03DCD31C5D1AB500F06A44 /* Frameworks */,
 				4C03DCD41C5D1AB500F06A44 /* Resources */,
+				3BBD9BE31AD4CF427653295F /* Embed Pods Frameworks */,
+				D33EE313EADB1F20069D9008 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,12 +315,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BBD9BE31AD4CF427653295F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-suggestag_ai/Pods-suggestag_ai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D33EE313EADB1F20069D9008 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-suggestag_ai/Pods-suggestag_ai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B1A776CB018562009D7722 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C03DCD21C5D1AB500F06A44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C03DD191C5D2EE700F06A44 /* SwiftRecognitionViewController.swift in Sources */,
 				4C03DCDC1C5D1AB500F06A44 /* ViewController.swift in Sources */,
+				4C03DD171C5D2DDE00F06A44 /* ClarifaiClient.m in Sources */,
 				4C03DCDA1C5D1AB500F06A44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,23 +509,30 @@
 		};
 		4C03DCFF1C5D1AB500F06A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 096A3754EF607A8931A654D0 /* Pods-suggestag_ai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = suggestag_ai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.jessicajoseph.suggestag-ai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "suggestag_ai/suggestag_ai-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4C03DD001C5D1AB500F06A44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4240B58FEAA251760351A01B /* Pods-suggestag_ai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = suggestag_ai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.jessicajoseph.suggestag-ai";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "suggestag_ai/suggestag_ai-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -509,6 +603,7 @@
 				4C03DD001C5D1AB500F06A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C03DD011C5D1AB500F06A44 /* Build configuration list for PBXNativeTarget "suggestag_aiTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +612,7 @@
 				4C03DD031C5D1AB500F06A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C03DD041C5D1AB500F06A44 /* Build configuration list for PBXNativeTarget "suggestag_aiUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +621,7 @@
 				4C03DD061C5D1AB500F06A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
