@@ -32,9 +32,9 @@ public class ImageTags {
 
             @Override
             protected void onPostExecute(List<RecognitionResult> results) {
-                for (Tag tag : results.get(0).getTags()) {
+                /*for (Tag tag : results.get(0).getTags()) {
                     System.out.println(tag.getName() + ": " + tag.getProbability());
-                }
+                }*/
                 cb.onResult(results);
             }
         }.execute();

@@ -7,11 +7,9 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +21,7 @@ import com.clarifai.api.Tag;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int SELECT_PHOTO = 1;
     private ImageView imageView;
     private TextView textView;
+    private ArrayList<String> topTags;
+    private Uri mImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showImageUri(Uri selectedImage) {
-
+        mImageUri = selectedImage;
         InputStream imageStream = null;
         try {
             imageStream = getContentResolver().openInputStream(selectedImage);
@@ -92,19 +93,25 @@ public class MainActivity extends AppCompatActivity {
         }
         Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
         imageView.setImageBitmap(yourSelectedImage);
-        textView.setText("...");
+        textView.setText("Recognizing...");
+        topTags=null;
         ImageTags.getTags(getRealPathFromURI(selectedImage), new ImageTags.Callback(){
             @Override
             public void onResult(List<RecognitionResult> results) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("tags:\n");
+                int k=0;
+                topTags = new ArrayList<>();
                 for(Tag t: results.get(0).getTags()) {
-                    sb.append( t.getName()+" ");
+                    sb.append(t.getName()).append(" ");
+                    topTags.add(t.getName());
+                    if(++k>=3) {
+                        break;
+                    }
                 }
                 textView.setText(sb.toString());
             }
         });
-
     }
 
     @Override
@@ -122,11 +129,26 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_share) {
+            if (topTags != null) {
+                Intent i = new Intent(Intent.ACTION_SEND_MULTIPLE);
+                i.putExtra(Intent.EXTRA_STREAM, mImageUri);
+                i.putExtra(Intent.EXTRA_TEXT, buildHashTags(topTags));
+                i.setType("*/*");
+                startActivity(i);
+            }
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private String buildHashTags(ArrayList<String> topTags) {
+        StringBuilder sb = new StringBuilder();
+        for(String s: topTags) {
+            sb.append("#").append(s.replace(" ", "")).append(" ");
+        }
+        return sb.toString();
     }
 
 
