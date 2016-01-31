@@ -60,7 +60,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         UIGraphicsEndImageContext()
 
         // Encode as a JPEG.
-        let jpeg = UIImageJPEGRepresentation(scaledImage, 0.9)!
+        let jpeg = UIImageJPEGRepresentation(image, 0.9)!
 
         if SwiftRecognitionViewController.conceptName == nil {
             // Standard Recognition: Send the JPEG to Clarifai for standard image tagging.
@@ -71,6 +71,8 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
                     self.textView.text = "Sorry, there was an error recognizing your image."
                 } else {
                     self.textView.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
+                    
+                    print(String(results![0].probabilities))
                 }
                 self.button.enabled = true
             }

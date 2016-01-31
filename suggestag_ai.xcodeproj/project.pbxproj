@@ -16,6 +16,7 @@
 		4C03DCFA1C5D1AB500F06A44 /* suggestag_aiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DCF91C5D1AB500F06A44 /* suggestag_aiUITests.swift */; };
 		4C03DD171C5D2DDE00F06A44 /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DD161C5D2DDE00F06A44 /* ClarifaiClient.m */; };
 		4C03DD191C5D2EE700F06A44 /* SwiftRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03DD181C5D2EE700F06A44 /* SwiftRecognitionViewController.swift */; };
+		4C03E1A01C5D717100F06A44 /* TagBuddy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C03E19F1C5D717100F06A44 /* TagBuddy.png */; };
 		BE6C6EA57D3B092EC686E84B /* Pods_suggestag_ai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F63C6AA2FD5409DF201CE5 /* Pods_suggestag_ai.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		4C03DD151C5D2DDE00F06A44 /* ClarifaiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
 		4C03DD161C5D2DDE00F06A44 /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
 		4C03DD181C5D2EE700F06A44 /* SwiftRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRecognitionViewController.swift; sourceTree = "<group>"; };
+		4C03E19F1C5D717100F06A44 /* TagBuddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TagBuddy.png; sourceTree = "<group>"; };
 		C9F63C6AA2FD5409DF201CE5 /* Pods_suggestag_ai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_suggestag_ai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		4C03DCD81C5D1AB500F06A44 /* suggestag_ai */ = {
 			isa = PBXGroup;
 			children = (
+				4C03E19F1C5D717100F06A44 /* TagBuddy.png */,
 				4C03DD081C5D1B3C00F06A44 /* Fonts */,
 				4C03DD091C5D1B4400F06A44 /* Storyboard */,
 				4C03DD071C5D1B2D00F06A44 /* Swift */,
@@ -296,6 +299,7 @@
 				4C03DCE41C5D1AB500F06A44 /* LaunchScreen.storyboard in Resources */,
 				4C03DCE11C5D1AB500F06A44 /* Assets.xcassets in Resources */,
 				4C03DCDF1C5D1AB500F06A44 /* Main.storyboard in Resources */,
+				4C03E1A01C5D717100F06A44 /* TagBuddy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
