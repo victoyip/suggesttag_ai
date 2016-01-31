@@ -20,11 +20,56 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.6.0)
+  - FBSDKCoreKit (4.9.1):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.9.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.9.1):
+    - FBSDKCoreKit
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Bolts
+  - FBSDKCoreKit (from `https://github.com/facebook/facebook-ios-sdk.git`, branch
+    `master`)
+  - FBSDKLoginKit (from `https://github.com/facebook/facebook-ios-sdk.git`, branch
+    `master`)
+  - FBSDKShareKit (from `https://github.com/facebook/facebook-ios-sdk.git`, branch
+    `master`)
+
+EXTERNAL SOURCES:
+  FBSDKCoreKit:
+    :branch: master
+    :git: https://github.com/facebook/facebook-ios-sdk.git
+  FBSDKLoginKit:
+    :branch: master
+    :git: https://github.com/facebook/facebook-ios-sdk.git
+  FBSDKShareKit:
+    :branch: master
+    :git: https://github.com/facebook/facebook-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  FBSDKCoreKit:
+    :commit: 303dacbce93bf0b2b374375c597c9e3e4dabecdf
+    :git: https://github.com/facebook/facebook-ios-sdk.git
+  FBSDKLoginKit:
+    :commit: 303dacbce93bf0b2b374375c597c9e3e4dabecdf
+    :git: https://github.com/facebook/facebook-ios-sdk.git
+  FBSDKShareKit:
+    :commit: 303dacbce93bf0b2b374375c597c9e3e4dabecdf
+    :git: https://github.com/facebook/facebook-ios-sdk.git
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  FBSDKCoreKit: aee20b6d9855f15b618d4fddd1a5ad45f5a4a59d
+  FBSDKLoginKit: ec22dc49bd372b064e93d6773df4ffefb3a552a2
+  FBSDKShareKit: b8c8ef0ed173f9fc1b3c8df384a0202ce53008d4
 
 COCOAPODS: 0.39.0

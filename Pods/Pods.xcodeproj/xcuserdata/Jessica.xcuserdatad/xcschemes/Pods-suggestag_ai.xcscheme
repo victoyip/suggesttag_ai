@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '94CB652D324F128585BDDC07'
+               BlueprintIdentifier = '5401E39D8462F29B8D179822'
                BlueprintName = 'Pods-suggestag_ai'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_suggestag_ai.framework'>

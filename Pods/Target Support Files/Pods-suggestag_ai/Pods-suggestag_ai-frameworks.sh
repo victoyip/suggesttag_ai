@@ -85,7 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-suggestag_ai/AFNetworking.framework"
+  install_framework "Pods-suggestag_ai/Bolts.framework"
+  install_framework "Pods-suggestag_ai/FBSDKCoreKit.framework"
+  install_framework "Pods-suggestag_ai/FBSDKLoginKit.framework"
+  install_framework "Pods-suggestag_ai/FBSDKShareKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-suggestag_ai/AFNetworking.framework"
+  install_framework "Pods-suggestag_ai/Bolts.framework"
+  install_framework "Pods-suggestag_ai/FBSDKCoreKit.framework"
+  install_framework "Pods-suggestag_ai/FBSDKLoginKit.framework"
+  install_framework "Pods-suggestag_ai/FBSDKShareKit.framework"
 fi

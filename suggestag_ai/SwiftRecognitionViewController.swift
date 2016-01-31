@@ -4,6 +4,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKShareKit
 
 /**
  * This view controller performs recognition using the Clarifai API.
@@ -52,16 +54,20 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
         // Scale down the image. This step is optional. However, sending large images over the
         // network is slow and does not significantly improve recognition performance.
         
-        
-        let size = CGSizeMake(320, 320 * image.size.height / image.size.width)
-        UIGraphicsBeginImageContext(size)
-        image.drawInRect(CGRectMake(0, 0, size.width, size.height))
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+//        
+//        let size = CGSizeMake(320, 320 * image.size.height / image.size.width)
+//        UIGraphicsBeginImageContext(size)
+//        image.drawInRect(CGRectMake(0, 0, size.width, size.height))
+//        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
 
         // Encode as a JPEG.
         let jpeg = UIImageJPEGRepresentation(image, 0.9)!
 
+        let content = FBSDKSharePhotoContent()
+        let shareButton = FBSDKShareButton()
+        
+        
         if SwiftRecognitionViewController.conceptName == nil {
             // Standard Recognition: Send the JPEG to Clarifai for standard image tagging.
             client.recognizeJpegs([jpeg]) {
@@ -70,11 +76,18 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
                     print("Error: \(error)\n")
                     self.textView.text = "Sorry, there was an error recognizing your image."
                 } else {
-                    self.textView.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
+                    content.photos = [image]
+                    let setStr = "Tags:\n#" + results![0].tags[0] + " #" + results![0].tags[1]
+                    
+                    self.textView.text = setStr
                     
                     print(String(results![0].probabilities))
+                    print(String(results![0].tags[0]))
                 }
                 self.button.enabled = true
+                shareButton.shareContent = content
+                
+                self.view.addSubview(shareButton)
             }
         } else {
             // Custom Training: Send the JPEG to Clarifai for prediction against a custom model.
