@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("");
+        imageView.setVisibility(View.GONE);
 
         findViewById(R.id.btn_pickimage).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,12 +95,13 @@ public class MainActivity extends AppCompatActivity {
         Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
         imageView.setImageBitmap(yourSelectedImage);
         textView.setText("Recognizing...");
+        imageView.setVisibility(View.VISIBLE);
         topTags=null;
         ImageTags.getTags(getRealPathFromURI(selectedImage), new ImageTags.Callback(){
             @Override
             public void onResult(List<RecognitionResult> results) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("tags:\n");
+                sb.append("Tags:\n");
                 int k=0;
                 topTags = new ArrayList<>();
                 for(Tag t: results.get(0).getTags()) {
